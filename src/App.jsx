@@ -11,7 +11,7 @@ const App = () => {
                 <div className="w-full">
                     <div className="w-fit mx-auto text-white">Welcome to</div>
                     <div className="w-fit mx-auto text-white text-5xl">
-                        Lorem ipsum
+                        Lorem ipsum absensi tes
                     </div>
                 </div>
                 {/* <div className="header">
