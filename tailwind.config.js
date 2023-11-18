@@ -7,6 +7,17 @@ export default {
                 poppins: ["Poppins", "sans-serif"],
             },
         },
+    theme: { 
+        extend: {
+            colors:{
+                "primary":"#ee333d",
+            },
+            fontFamily: {
+                poppins: ["Poppins", "sans-serif"],
+            },
+
+        },
     },
     plugins: [],
-};
+}
+}

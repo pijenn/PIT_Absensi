@@ -20,7 +20,7 @@ const Detail = () => {
                             <h1 className="text-white text-[16px]">https://docs.google.com/d/1PwNo0EgDPOHdOG7xHgKTF9-/edit?usp=sharing</h1>
                         </div>
                     </div>
-                    <div className="flex justify-between bg-red-600 px-10 py-5 border-[3px] border-white rounded-xl">
+                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl">
                         <div className="">
                             <h1 className="font-bold text-white text-[20px]">NO.</h1>
                             <h1 className="text-white text-[20px]">1.</h1>
@@ -46,8 +46,6 @@ const Detail = () => {
                             <h1 className="text-white text-[20px]">HADIR</h1>
                         </div>
                     </div>
-
-                    <div className="w-[500px] h-[500px] px-14 py-[49px] bg-white rounded-[40px] border-2 border-white backdrop-blur-[10px]" />
                 </div>
             </div>
         </>
