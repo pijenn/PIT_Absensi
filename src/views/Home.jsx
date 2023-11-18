@@ -12,7 +12,7 @@ const Home = () => {
                     <div className="w-fit mx-auto text-white font-bold text-[48px]">
                         Selamat Datang di
                     </div>
-                    <div className="w-fit mx-auto text-red-600 text-[100px] font-bold mt-1 shadow-lg">
+                    <div className="w-fit mx-auto text-primary text-[100px] font-bold mt-1 shadow-lg">
                         PRESENSI FOR PIT
                     </div>
                     <div className="w-6/12 mx-auto text-white mt-4 text-[28px] text-center ">
