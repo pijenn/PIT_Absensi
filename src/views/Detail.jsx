@@ -20,7 +20,7 @@ const Detail = () => {
                             <h1 className="text-white text-[16px]">https://docs.google.com/d/1PwNo0EgDPOHdOG7xHgKTF9-/edit?usp=sharing</h1>
                         </div>
                     </div>
-                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl">
+                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl mt-10">
                         <div className="">
                             <h1 className="font-bold text-white text-[20px]">NO.</h1>
                             <h1 className="text-white text-[20px]">1.</h1>
