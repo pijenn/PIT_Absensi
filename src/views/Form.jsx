@@ -89,7 +89,7 @@ const Form = () => {
                                 STATUS
                             </h1>
                             <h1 className="text-white text-[20px]">
-                                <button className="bg-primary border-none rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-2">
+                                <button className="bg-primary border-none group rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-2">
                                     <span className="mr-3 font-bold">
                                         ALPHA
                                     </span>
@@ -107,12 +107,25 @@ const Form = () => {
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                                         />
                                     </svg>
-                                </button>   
+                                    <div className="absolute hidden group-focus:block top-12  w-max mt-1 rounded border-none">
+                                        <ul className="text-left rounded">
+                                            <li className="px-9 py-2  bg-primary hover:bg-red-500 border-none rounded-full items-center font-bold ">
+                                                ALPHA
+                                            </li>
+                                            <li className="px-9 py-2 bg-green-600 hover:bg-green-500 rounded-full font-bold items-center border-none mt-2">
+                                                HADIR
+                                            </li>
+                                            <li className="px-9 py-2  bg-gray-500 hover:bg-gray-400 rounded-full font-bold items-center border-none mt-2">
+                                                IZIN
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </button>
                             </h1>
 
                             <h1 className="text-white text-[20px]">
                                 {" "}
-                                <button className="bg-primary border-none rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-5">
+                                <button className="bg-primary border-none group rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-5">
                                     <span className="mr-3 font-bold">
                                         ALPHA
                                     </span>
@@ -130,11 +143,24 @@ const Form = () => {
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                                         />
                                     </svg>
+                                    <div className="absolute hidden group-focus:block top-12  w-max mt-1 rounded border-none">
+                                        <ul className="text-left rounded">
+                                            <li className="px-9 py-2  bg-primary hover:bg-red-500 border-none rounded-full items-center font-bold ">
+                                                ALPHA
+                                            </li>
+                                            <li className="px-9 py-2 bg-green-600 hover:bg-green-500 rounded-full font-bold items-center border-none mt-2">
+                                                HADIR
+                                            </li>
+                                            <li className="px-9 py-2  bg-gray-500 hover:bg-gray-400 rounded-full font-bold items-center border-none mt-2">
+                                                IZIN
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </button>
                             </h1>
                             <h1 className="text-white text-[20px]">
                                 {" "}
-                                <button className="bg-primary border-none rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-5">
+                                <button className="bg-primary border-none group rounded-full px-3 py-2 items-center inline-flex active:bg-red-600 hover:bg-red-500 mt-6">
                                     <span className="mr-3 font-bold">
                                         ALPHA
                                     </span>
@@ -152,8 +178,22 @@ const Form = () => {
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                                         />
                                     </svg>
+                                    <div className="absolute hidden group-focus:block bottom-0    w-max mt-1 rounded border-none">
+                                        <ul className="text-left rounded">
+                                            <li className="px-9 py-2  bg-primary hover:bg-red-500 border-none rounded-full items-center font-bold ">
+                                                ALPHA
+                                            </li>
+                                            <li className="px-9 py-2 bg-green-600 hover:bg-green-500 rounded-full font-bold items-center border-none mt-2">
+                                                HADIR
+                                            </li>
+                                            <li className="px-9 py-2  bg-gray-500 hover:bg-gray-400 rounded-full font-bold items-center border-none mt-2">
+                                                IZIN
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </button>
                             </h1>
+                            <div></div>
                         </div>
                     </div>
                 </div>
