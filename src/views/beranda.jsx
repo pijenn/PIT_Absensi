@@ -12,9 +12,7 @@ const Beranda = () => {
                     <h1 className="text-center text-[32px] font-bold text-primary">
                         REKAP ABSENSI PIT
                     </h1>
-                </div>
-
-                <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl">
+                <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl mt-10">
                     <div className="">
                         <div className="flex-row flex justify-between">
                             <div className="">
@@ -95,6 +93,8 @@ const Beranda = () => {
                         </div>
                     </div>
                 </div>
+                </div>
+
             </div>
         </>
     );
