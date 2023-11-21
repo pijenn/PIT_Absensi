@@ -1,5 +1,6 @@
 import backgroundStyle from "../assets/bgLanding.jpg";
 import logoBem from "../assets/logoBEM.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -22,15 +23,11 @@ const Home = () => {
                         Jangan lupa absen!!
                     </div>
                     <div className="w-fit mx-auto mt-8">
-                        <button
-                            className="bg-red-500 hover:bg-red-400 text-white px-20 py-2 rounded-full active:bg-red-700 text-[24px] duration-300"
-                            onClick={() =>
-                                (window.location.href =
-                                    "http://127.0.0.1:5173/Login")
-                            }
-                        >
-                            Mulai
-                        </button>
+                        <Link to="/Login">
+                            <button className="bg-red-500 hover:bg-red-400 text-white px-20 py-2 rounded-full active:bg-red-700 text-[24px] duration-300">
+                                Mulai
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

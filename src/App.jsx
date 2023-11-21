@@ -4,11 +4,13 @@ import Login from "./views/Login";
 import Detail from "./views/Detail";
 import Beranda from "./views/beranda";
 import Form from "./views/Form";
+import Navbar from "./views/navbar";
 
 const App = () => {
     return (
         <>
             <Router>
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/login" element={<Login />}></Route>

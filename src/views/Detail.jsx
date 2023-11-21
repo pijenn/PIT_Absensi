@@ -1,3 +1,4 @@
+import React from 'react'
 import backgroundStyle from "../assets/bgLanding.jpg";
 
 const Detail = () => {
@@ -5,8 +6,8 @@ const Detail = () => {
         <>
             <div className="h-screen bg-cover font-poppins" style={{ backgroundImage: `url(${backgroundStyle})` }}>
                 <div className="w-9/12 mx-auto py-10">
-                    <h1 className="text-[32px] text-center font-bold text-[#EE333D]">ABSENSI RAPAT KE-1</h1>
-                    <div className="bg-red-600 px-10 py-2 border-[3px] border-white rounded-xl">
+                    <h1 className="text-[32px] text-center font-bold text-[#EE333D] mt-9">ABSENSI RAPAT KE-1</h1>
+                    <div className="bg-red-600 px-10 py-2 border-[3px] border-white rounded-xl mt-5">
                         <div className="my-4">
                             <h1 className="font-bold text-white text-[20px]">TEMPAT</h1>
                             <h1 className="text-white text-[16px]">Roketto Coffee & Co</h1>
