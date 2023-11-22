@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import backgroundStyle from "../assets/bgLanding.jpg";
 import logoBem from "../assets/logoBEM.png";
 import warning from "../assets/warning!!.png";
+import { Datepicker, Input, initTE } from "tw-elements";
+initTE({ Datepicker, Input }, { allowReinits: true });
 
 const Navbar = () => {
     return (
@@ -43,7 +45,7 @@ const Navbar = () => {
                         className="modal modal-bottom sm:modal-middle"
                     >
                         <div className="modal-box bg-white">
-                            <div className="justify-center align-middle content-center flex">
+                            <div className="justify-center align-middle content-center flex transition ease-in-out delay-150">
                                 <img src={warning} alt="" className="w-3/12" />
                             </div>
                             <h3 className="font-bold text-[34px] text-black align-middle text-center mt-3">
