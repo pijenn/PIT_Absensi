@@ -13,8 +13,10 @@ const Navbar = () => {
                 </div>
                 <div className="w-5/12 flex justify-end">
                     <Link to="/form">
-                <button className="btn btn-error bg-primary rounded-full font-bold text-white border-none mr-3">TAMBAH ABSEN</button>
-                </Link>
+                        <button className="btn btn-error bg-primary rounded-full font-bold text-white border-none mr-3">
+                            TAMBAH ABSEN
+                        </button>
+                    </Link>
                     <button
                         className="btn font-bold text-white bg-primary rounded-full py-2 px-3"
                         onClick={() =>
@@ -56,13 +58,15 @@ const Navbar = () => {
                                     <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4">
                                         Batal
                                     </button>
-                                </form>
-                                <form method="dialog">
-                                    <Link to="/">
-                                        <button className="bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400">
-                                            Keluar
-                                        </button>
-                                    </Link>
+                                    <button
+                                        className="bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 btn border-none"
+                                        onClick={() =>
+                                            (window.location.href =
+                                                "http://localhost:5173/")
+                                        }
+                                    >
+                                        Keluar
+                                    </button>
                                 </form>
                             </div>
                         </div>

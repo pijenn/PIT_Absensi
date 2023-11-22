@@ -1,6 +1,7 @@
 import backgroundStyle from "../assets/bgLanding.jpg";
 import { Link } from "react-router-dom";
 import ceklist from "../assets/ceklis.png";
+import warning from "../assets/warning!!.png";
 
 const Form = () => {
     return (
@@ -237,35 +238,75 @@ const Form = () => {
                                     className="btn bg-primary text-white font-bold rounded-full px-12 mr-7 text-[20px] mt-3 border-none hover:bg-red-400 "
                                     onClick={() =>
                                         document
-                                            .getElementById("my_modal_2")
+                                            .getElementById("my_modal_1")
                                             .showModal()
                                     }
                                 >
                                     SUBMIT
                                 </button>
-                                <dialog id="my_modal_2" className="modal">
+                                <dialog id="my_modal_1" className="modal">
                                     <div className="modal-box align-middle bg-white">
                                         <div className="justify-center align-middle content-center flex">
                                             <img
-                                                src={ceklist}
+                                                src={warning}
                                                 alt=""
-                                                className="w-3/12 "
+                                                className="w-3/12"
                                             />
                                         </div>
                                         <h3 className="font-bold text-lg align-middle text-black text-center text-[36px] mt-5">
-                                            Absensi berhasil!!!
+                                            Yakin gak nieh??
                                         </h3>
                                         <p className="py-4 text-center">
-                                            Yayy, terimakasi yaa sudah absen
-                                            &lt;3
+                                            Periksa lagi yaahh soalnya gak bisa
+                                            edit xixi
                                         </p>
+                                        <div className="modal-action w-full justify-center">
+                                            <form method="dialog">
+                                                <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4">
+                                                    Batal
+                                                </button>
+                                                <button
+                                                    className="btn bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 border-none "
+                                                    onClick={() =>
+                                                        document
+                                                            .getElementById(
+                                                                "my_modal_2"
+                                                            )
+                                                            .showModal()
+                                                    }
+                                                >
+                                                    SUBMIT
+                                                </button>
+                                                <dialog
+                                                    id="my_modal_2"
+                                                    className="modal"
+                                                >
+                                                    <div className="modal-box align-middle bg-white">
+                                                        <div className="justify-center align-middle content-center flex">
+                                                            <img
+                                                                src={ceklist}
+                                                                alt=""
+                                                                className="w-3/12 "
+                                                            />
+                                                        </div>
+                                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[36px] mt-5">
+                                                            Absensi berhasil!!!
+                                                        </h3>
+                                                        <p className="py-4 text-center">
+                                                            Yayy, terimakasi yaa
+                                                            sudah absen &lt;3
+                                                        </p>
+                                                    </div>
+                                                    <form
+                                                        method="dialog"
+                                                        className="modal-backdrop"
+                                                    >
+                                                        <button>close</button>
+                                                    </form>
+                                                </dialog>
+                                            </form>
+                                        </div>
                                     </div>
-                                    <form
-                                        method="dialog"
-                                        className="modal-backdrop"
-                                    >
-                                        <button>close</button>
-                                    </form>
                                 </dialog>
                             </div>
                         </div>
