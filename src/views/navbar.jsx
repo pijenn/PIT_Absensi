@@ -46,16 +46,16 @@ const Navbar = () => {
                             <div className="justify-center align-middle content-center flex">
                                 <img src={warning} alt="" className="w-3/12" />
                             </div>
-                            <h3 className="font-bold text-[36px] text-black align-middle text-center">
+                            <h3 className="font-bold text-[34px] text-black align-middle text-center mt-3">
                                 Mau keluar?
                             </h3>
                             <p className="py-4 text-center">
                                 Apakah kamu yakin buat ninggalin aku?
                                 :&#40;&#40;&#40;
                             </p>
-                            <div className="modal-action w-full justify-center">
+                            <div className="modal-action w-full justify-center mt-3">
                                 <form method="dialog">
-                                    <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4">
+                                    <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                         Batal
                                     </button>
                                     <button

@@ -26,11 +26,11 @@ const Form = () => {
                         <div className="mt-2 flex flex-row ">
                             <input
                                 type="text"
-                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/4 ml-0 bg-white text-black"
+                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/3 ml-0 bg-white text-black"
                             ></input>
                             <input
                                 type="text"
-                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/4 ml-0 bg-white text-black"
+                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/3 ml-0 bg-white text-black"
                             ></input>
                         </div>
                         <div className="text-white text-[20px] font-semibold mt-5">
@@ -123,16 +123,20 @@ const Form = () => {
                                             </label>
                                             <ul
                                                 tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
                                             >
-                                                <li className="bg-primary rounded-full text-white font-bold">
-                                                    <a>Alpha</a>
+                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
+                                                    <a>ALPHA</a>
                                                 </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2">
-                                                    <a>Hadir</a>
+                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
+                                                    <a className="ml-1">
+                                                        HADIR
+                                                    </a>
                                                 </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2">
-                                                    <a>Izin</a>
+                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
+                                                    <a className="text-center align-middle content-center ml-3">
+                                                        IZIN
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -161,16 +165,20 @@ const Form = () => {
                                             </label>
                                             <ul
                                                 tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
                                             >
-                                                <li className="bg-primary rounded-full text-white font-bold">
-                                                    <a>Alpha</a>
+                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
+                                                    <a>ALPHA</a>
                                                 </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2">
-                                                    <a>Hadir</a>
+                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
+                                                    <a className="ml-1">
+                                                        HADIR
+                                                    </a>
                                                 </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2">
-                                                    <a>Izin</a>
+                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
+                                                    <a className="text-center align-middle content-center ml-3">
+                                                        IZIN
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -199,16 +207,20 @@ const Form = () => {
                                             </label>
                                             <ul
                                                 tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
                                             >
-                                                <li className="bg-primary rounded-full text-white font-bold">
-                                                    <a>Alpha</a>
+                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
+                                                    <a>ALPHA</a>
                                                 </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2">
-                                                    <a>Hadir</a>
+                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
+                                                    <a className="ml-1">
+                                                        HADIR
+                                                    </a>
                                                 </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2">
-                                                    <a>Izin</a>
+                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
+                                                    <a className="text-center align-middle content-center ml-3">
+                                                        IZIN
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -253,29 +265,32 @@ const Form = () => {
                                                 className="w-3/12"
                                             />
                                         </div>
-                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[36px] mt-5">
+                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[34px] mt-5">
                                             Yakin gak nieh??
                                         </h3>
-                                        <p className="py-4 text-center">
+                                        <p className="py-4 text-center mt-3">
                                             Periksa lagi yaahh soalnya gak bisa
                                             edit xixi
                                         </p>
-                                        <div className="modal-action w-full justify-center">
+                                        <div className="modal-action w-full justify-center mt-2">
                                             <form method="dialog">
-                                                <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4">
+                                                <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                                     Batal
                                                 </button>
                                                 <button
-                                                    className="btn bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 border-none "
+                                                    className="btn bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 border-none"
                                                     onClick={() =>
                                                         document
                                                             .getElementById(
                                                                 "my_modal_2"
                                                             )
-                                                            .showModal()
+                                                            .showModal()(
+                                                            (window.location.href =
+                                                                "http://localhost:5173/")
+                                                        )
                                                     }
                                                 >
-                                                    SUBMIT
+                                                    Submit
                                                 </button>
                                                 <dialog
                                                     id="my_modal_2"
@@ -289,10 +304,10 @@ const Form = () => {
                                                                 className="w-3/12 "
                                                             />
                                                         </div>
-                                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[36px] mt-5">
+                                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[34px] mt-5">
                                                             Absensi berhasil!!!
                                                         </h3>
-                                                        <p className="py-4 text-center">
+                                                        <p className="py-4 text-center mt-2">
                                                             Yayy, terimakasi yaa
                                                             sudah absen &lt;3
                                                         </p>
