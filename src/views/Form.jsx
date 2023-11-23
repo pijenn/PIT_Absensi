@@ -11,10 +11,10 @@ const Form = () => {
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
                 <div className="w-9/12 mx-auto py-10 mt-24">
-                    <h1 className="text-center text-[32px] font-bold text-primary mt-12">
+                    <h1 className="text-center text-[32px] font-bold text-primary mt-12 animate-fade-down animate-once animate-duration-500 animate-ease-in-out">
                         FORM ABSENSI
                     </h1>
-                    <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl mt-8">
+                    <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl mt-8 animate-fade-right animate-once animate-duration-500 animate-ease-in-out z-[2]">
                         <div className="flex flex-row justify-between">
                             <div className="text-white text-[20px] font-semibold basis-1/2">
                                 Rapat ke
@@ -50,7 +50,7 @@ const Form = () => {
                             ></input>
                         </div>
                     </div>
-                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl mt-10">
+                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl mt-10 animate-fade-left animate-once animate-duration-500 animate-ease-in-out">
                         <div className="w-full">
                             <div className="flex-row flex justify-between">
                                 <div className="">

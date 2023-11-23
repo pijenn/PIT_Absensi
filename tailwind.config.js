@@ -20,7 +20,6 @@ export default {
                 2000: "2000ms",
             },
         },
-        safelist: ["animate-[jiggle_0.5s]", "animate-[jiggle_0.5s]"],
     },
 
     plugins: [

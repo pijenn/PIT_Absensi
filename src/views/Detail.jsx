@@ -1,4 +1,4 @@
-import React from 'react'
+
 import backgroundStyle from "../assets/bgLanding.jpg";
 
 const Detail = () => {
@@ -9,10 +9,10 @@ const Detail = () => {
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
                 <div className="w-9/12 mx-auto py-10">
-                    <h1 className="text-[32px] text-center font-bold text-[#EE333D] mt-9">
+                    <h1 className="text-[32px] text-center font-bold text-[#EE333D] mt-9 animate-fade-down animate-once animate-duration-500 animate-ease-in-out">
                         ABSENSI RAPAT KE-1
                     </h1>
-                    <div className="bg-white backdrop-blur-lg bg-opacity-30 px-10 py-2 border-[1px] border-white rounded-xl mt-5">
+                    <div className="bg-white backdrop-blur-lg bg-opacity-30 px-10 py-2 border-[1px] border-white rounded-xl mt-5 animate-fade-left animate-once animate-duration-500 animate-ease-in-out">
                         <div className="my-4">
                             <h1 className="font-bold text-white text-[20px]">
                                 TEMPAT
@@ -41,7 +41,7 @@ const Detail = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[1px] border-white rounded-xl mt-10">
+                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[1px] border-white rounded-xl mt-10 animate-fade-right animate-once animate-duration-500 animate-ease-in-out">
                         <div className="">
                             <h1 className="font-bold text-white text-[20px] py-2">
                                 NO.
