@@ -2,8 +2,26 @@ import backgroundStyle from "../assets/bgLanding.jpg";
 import { Link } from "react-router-dom";
 import ceklist from "../assets/ceklis.png";
 import warning from "../assets/warning!!.png";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Form = () => {
+    const [users, setUsers] = useState([]);
+
+    const getUsers = async () => {
+        try {
+            let response = await axios.get(
+                "https://api-website-presensi-pit.vercel.app/users"
+            );
+            setUsers(response.data.data);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
+    useEffect(() => {
+        getUsers();
+    }, []);
     return (
         <>
             <div
@@ -51,182 +69,81 @@ const Form = () => {
                         </div>
                     </div>
                     <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl mt-10 animate-fade-left animate-once animate-duration-500 animate-ease-in-out">
-                        <div className="w-full">
-                            <div className="flex-row flex justify-between">
-                                <div className="">
-                                    <h1 className="font-bold text-white text-[20px]">
-                                        NO.
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-4">
-                                        1.
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-9">
-                                        2.
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-10">
-                                        3.
-                                    </h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="font-bold text-white text-[20px]">
-                                        NAMA
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-4">
-                                        Firza Aurellia Iskandar
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-9">
-                                        Rafie R. Al Aziz Zein
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-10">
-                                        Akbar Fikri Abdillah
-                                    </h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="font-bold text-white text-[20px]">
-                                        ROLE
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-4">
-                                        Staf Muda
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-9 ">
-                                        Staf Muda
-                                    </h1>
-                                    <h1 className="text-white text-[20px] mt-10">
-                                        Staf Muda
-                                    </h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="font-bold text-white text-[20px] ml-7">
-                                        STATUS
-                                    </h1>
-                                    <h1 className="text-white text-[20px]">
-                                        <div className="dropdown">
-                                            <label
-                                                tabIndex={0}
-                                                className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400"
-                                            >
-                                                STATUS
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke-width="1.5"
-                                                    stroke="currentColor"
-                                                    class="w-6 h-6"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                                    />
-                                                </svg>
-                                            </label>
-                                            <ul
-                                                tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
-                                            >
-                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
-                                                    <a>ALPHA</a>
-                                                </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
-                                                    <a className="ml-1">
-                                                        HADIR
-                                                    </a>
-                                                </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
-                                                    <a className="text-center align-middle content-center ml-3">
-                                                        IZIN
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </h1>
-                                    <h1 className="text-white text-[20px]">
-                                        <div className="dropdown mt-3">
-                                            <label
-                                                tabIndex={0}
-                                                className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400"
-                                            >
-                                                STATUS
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke-width="1.5"
-                                                    stroke="currentColor"
-                                                    class="w-6 h-6"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                                    />
-                                                </svg>
-                                            </label>
-                                            <ul
-                                                tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
-                                            >
-                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
-                                                    <a>ALPHA</a>
-                                                </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
-                                                    <a className="ml-1">
-                                                        HADIR
-                                                    </a>
-                                                </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
-                                                    <a className="text-center align-middle content-center ml-3">
-                                                        IZIN
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </h1>
-                                    <h1 className="text-white text-[20px]">
-                                        <div className="dropdown mt-3">
-                                            <label
-                                                tabIndex={0}
-                                                className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400"
-                                            >
-                                                STATUS
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke-width="1.5"
-                                                    stroke="currentColor"
-                                                    class="w-6 h-6"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                                    />
-                                                </svg>
-                                            </label>
-                                            <ul
-                                                tabIndex={0}
-                                                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
-                                            >
-                                                <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
-                                                    <a>ALPHA</a>
-                                                </li>
-                                                <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
-                                                    <a className="ml-1">
-                                                        HADIR
-                                                    </a>
-                                                </li>
-                                                <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
-                                                    <a className="text-center align-middle content-center ml-3">
-                                                        IZIN
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </h1>
+                        <div className="w-full ">
+                            <div className=" flex flex-col justify-between ">
+                                <div className="flex-row justify-between ">
+                                    <div className="flex flex-row w-full justify-between">
+                                        <h1 className="font-bold text-white text-[20px] basis-1/6 flex justify-center">
+                                            NO.
+                                        </h1>
+                                        <h1 className="font-bold text-white text-[20px] basis-1/4 flex justify-center">
+                                            NAMA
+                                        </h1>
+                                        <h1 className="font-bold text-white text-[20px] basis-1/4 flex justify-center">
+                                            ROLE
+                                        </h1>
+                                        <h1 className="font-bold text-white text-[20px] basis-1/4 flex justify-center">
+                                            STATUS
+                                        </h1>
+                                    </div>
 
-                                    <div></div>
+                                    {users.map((user, index) => {
+                                        return (
+                                            <div className="flex flex-row w-full justify-between items-center content-center align-middle" key={index}>
+                                                <h1 className="font-bold text-white text-[20px] basis-1/6 flex justify-center">
+                                                    {user.id}
+                                                </h1>
+                                                <h1 className="font-bold text-white text-[20px] basis-1/4  flex justify-center text-center">
+                                                    {user.nama}
+                                                </h1>
+                                                <h1 className="font-bold text-white text-[20px] basis-1/4 flex justify-center">
+                                                    {user.role}
+                                                </h1>
+                                                <h1 className="text-white text-[20px] basis-1/4 flex justify-center ">
+                                                    <div className="dropdown">
+                                                        <label
+                                                            tabIndex={0}
+                                                            className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400"
+                                                        >
+                                                            STATUS
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                                stroke-width="1.5"
+                                                                stroke="currentColor"
+                                                                class="w-6 h-6"
+                                                            >
+                                                                <path
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                                                                />
+                                                            </svg>
+                                                        </label>
+                                                        <ul
+                                                            tabIndex={0}
+                                                            className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
+                                                        >
+                                                            <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
+                                                                <a>ALPHA</a>
+                                                            </li>
+                                                            <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
+                                                                <a className="ml-1">
+                                                                    HADIR
+                                                                </a>
+                                                            </li>
+                                                            <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
+                                                                <a className="text-center align-middle content-center ml-3">
+                                                                    IZIN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h1>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             <div className="">
@@ -286,7 +203,7 @@ const Form = () => {
                                                             )
                                                             .showModal()(
                                                             (window.location.href =
-                                                                "http://localhost:5173/")
+                                                                "http://localhost:5173/Beranda")
                                                         )
                                                     }
                                                 >

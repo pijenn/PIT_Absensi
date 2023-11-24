@@ -1,7 +1,25 @@
 
 import backgroundStyle from "../assets/bgLanding.jpg";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Detail = () => {
+    const [users, setUsers] = useState([]);
+
+    const getUsers = async () => {
+        try {
+            let response = await axios.get(
+                "https://api-website-presensi-pit.vercel.app/users"
+            );
+           setUsers(response.data.data);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
+    useEffect(() => {
+        getUsers();
+    }, []);
     return (
         <>
             <div
