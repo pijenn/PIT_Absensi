@@ -25,7 +25,7 @@ const Form = () => {
     return (
         <>
             <div
-                className="h-screen bg-cover flex items-center font-poppins"
+                className="h-screen bg-cover flex items-center font-poppins bg-fixed overflow-auto"
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
                 <div className="w-9/12 mx-auto py-10 mt-24">
