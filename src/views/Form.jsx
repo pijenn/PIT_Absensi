@@ -25,52 +25,58 @@ const Form = () => {
     return (
         <>
             <div
-                className="h-screen bg-cover flex items-center font-poppins bg-fixed overflow-auto"
+                className="bg-cover flex items-center font-poppins bg-fixed"
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
-                <div className="w-9/12 mx-auto py-10 mt-24">
-                    <h1 className="text-center text-[32px] font-bold text-primary mt-12 animate-fade-down animate-once animate-duration-500 animate-ease-in-out">
+                <div className="w-9/12 mx-auto py-10 mt-16">
+                    <h1 className="text-center text-[32px] font-bold text-primary mt-12 animate-fade animate-once animate-duration-500 animate-ease-in-out">
                         FORM ABSENSI
                     </h1>
-                    <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl mt-8 animate-fade-right animate-once animate-duration-500 animate-ease-in-out z-[2]">
-                        <div className="flex flex-row justify-between">
-                            <div className="text-white text-[20px] font-semibold basis-1/2">
-                                Rapat ke
+                    <div className=" bg-white backdrop-blur-lg bg-opacity-30 px-10 py-10 border-[2px] border-white rounded-xl mt-8 animate-fade animate-once animate-duration-500 animate-ease-in-out z-[2]">
+                        <div className="flex ">
+                            <div className="text-white text-[20px] font-semibold basis-1/2 mr-3">
+                                <div>Rapat ke</div>
+                                <div className="mt-2">
+                                    <input
+                                        type="text"
+                                        className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full  bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
+                                    ></input>
+                                </div>
                             </div>
-                            <div className="text-left text-white text-[20px] font-semibold basis-1/2">
-                                Tanggal
+                            <div className="text-left text-white text-[20px] font-semibold basis-1/2 ml-3">
+                                <div> Tanggal</div>
+                                <div className="mt-2">
+                                    <input
+                                        type="text"
+                                        className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full   bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
+                                    ></input>
+                                </div>
                             </div>
                         </div>
-                        <div className="mt-2 flex flex-row ">
-                            <input
-                                type="text"
-                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/3 ml-0 bg-white text-black"
-                            ></input>
-                            <input
-                                type="text"
-                                className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold basis-1/3 ml-0 bg-white text-black"
-                            ></input>
-                        </div>
-                        <div className="text-white text-[20px] font-semibold mt-5">
+
+                        <div className="text-white text-[20px] font-semibold mt-3">
                             Tempat
                         </div>
                         <div className="mt-2">
                             <input
                                 type="text"
-                                className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 bg-white text-black font-bold"
+                                className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 bg-white text-black font-bold text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
                             ></input>
                         </div>
-                        <div className="text-white text-[20px] font-semibold mt-5">
+                        <div className="text-white text-[20px] font-semibold mt-3">
                             Link Notulensi
-                            <input
-                                type="text"
-                                className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 font-bold bg-white text-black"
-                            ></input>
+                            <div />
+                            <div className="mt-2">
+                                <input
+                                    type="text"
+                                    className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 font-bold bg-white text-black text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
+                                ></input>
+                            </div>
                         </div>
                     </div>
-                    <div className="flex justify-between bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[3px] border-white rounded-xl mt-10 animate-fade-left animate-once animate-duration-500 animate-ease-in-out">
-                        <div className="w-full ">
-                            <div className=" flex flex-col justify-between ">
+                    <div className="flex justify-between h-[500px] bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[2px] border-white rounded-xl mt-10 animate-fade animate-once animate-duration-500 animate-ease-in-out  overflow-auto">
+                        <div className="w-full">
+                            <div className=" flex flex-col justify-between mt-3 ">
                                 <div className="flex-row justify-between ">
                                     <div className="flex flex-row w-full justify-between">
                                         <h1 className="font-bold text-white text-[20px] basis-1/6 flex justify-center">
@@ -89,21 +95,24 @@ const Form = () => {
 
                                     {users.map((user, index) => {
                                         return (
-                                            <div className="flex flex-row w-full justify-between items-center content-center align-middle" key={index}>
-                                                <h1 className="font-bold text-white text-[20px] basis-1/6 flex justify-center">
-                                                    {user.id}
+                                            <div
+                                                className="flex flex-row w-full justify-between items-center content-center align-middle mt-4"
+                                                key={index}
+                                            >
+                                                <h1 className=" text-white text-[20px] basis-1/6 flex justify-center">
+                                                    {index+1}
                                                 </h1>
-                                                <h1 className="font-bold text-white text-[20px] basis-1/4  flex justify-center text-center">
+                                                <h1 className=" text-white text-[20px] basis-1/4  flex justify-start">
                                                     {user.nama}
                                                 </h1>
-                                                <h1 className="font-bold text-white text-[20px] basis-1/4 flex justify-center">
+                                                <h1 className=" text-white text-[20px] basis-1/4 flex justify-center">
                                                     {user.role}
                                                 </h1>
                                                 <h1 className="text-white text-[20px] basis-1/4 flex justify-center ">
                                                     <div className="dropdown">
                                                         <label
                                                             tabIndex={0}
-                                                            className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400"
+                                                            className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400 px-4"
                                                         >
                                                             STATUS
                                                             <svg
@@ -146,25 +155,10 @@ const Form = () => {
                                     })}
                                 </div>
                             </div>
-                            <div className="">
-                                <div className="flex justify-center mt-10 content-center">
-                                    <button className="bg-transparent border-[2px] border-r-0 border-white text-white text-[20px] px-3 py-2 rounded-l-full hover:bg-gray-500 active:bg-gray-400">
-                                        Previous
-                                    </button>
-                                    <button className="bg-primary border-y-2  text-white text-[20px] font-bold px-4 py-2  active:bg-red-600">
-                                        1
-                                    </button>
-                                    <button className="bg-[#151128] border-y-2  text-white text-[20px] font-bold px-4 py-2  active:bg-primary">
-                                        2
-                                    </button>
-                                    <button className="bg-transparent border-[2px] border-l-0 rounded-r-full text-white text-[20px] px-3 py-2 hover:bg-gray-500 active:bg-gray-400">
-                                        Next
-                                    </button>
-                                </div>
-                            </div>
-                            <div className="w-full items-end flex flex-row-reverse">
+
+                            <div className="w-fit items-end flex mx-auto">
                                 <button
-                                    className="btn bg-primary text-white font-bold rounded-full px-12 mr-7 text-[20px] mt-3 border-none hover:bg-red-400 "
+                                    className="btn bg-primary text-white font-bold rounded-full px-20 mr-7 text-[20px] mt-14  border-none hover:bg-red-400 "
                                     onClick={() =>
                                         document
                                             .getElementById("my_modal_1")
@@ -182,20 +176,20 @@ const Form = () => {
                                                 className="w-3/12"
                                             />
                                         </div>
-                                        <h3 className="font-bold text-lg align-middle text-black text-center text-[34px] mt-5">
+                                        <h3 className="font-bold text-[28px] text-black align-middle text-center mt-3">
                                             Yakin gak nieh??
                                         </h3>
-                                        <p className="py-4 text-center mt-3">
+                                        <p className="pt-2 pb-4 text-center">
                                             Periksa lagi yaahh soalnya gak bisa
                                             edit xixi
                                         </p>
-                                        <div className="modal-action w-full justify-center mt-2">
+                                        <div className="modal-action w-full justify-center mt-3 mb-3">
                                             <form method="dialog">
-                                                <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
+                                                <button className="btn border-1 border-slate-500 bg-transparent px-12 py-2 rounded-full text-[16px] text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                                     Batal
                                                 </button>
                                                 <button
-                                                    className="btn bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 border-none"
+                                                    className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
                                                     onClick={() =>
                                                         document
                                                             .getElementById(

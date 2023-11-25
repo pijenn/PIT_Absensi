@@ -8,14 +8,14 @@ initTE({ Datepicker, Input }, { allowReinits: true });
 const Navbar = () => {
     return (
         <>
-            <div className="flex w-full fixed top-0 px-24 py-8 font-poppins flex-row justify-between z-[1] bg-transparent">
+            <div className="flex fixed w-full top-0 px-24 py-8 font-poppins flex-row justify-between z-[1] bg-transparent">
                 <img src={logoBem} alt="" className="w-[60px] ml-5" />
                 <div className="font-bold text-[18px] text-white mt-3 ml-3 basis-3/4">
                     BEM FILKOM 2023
                 </div>
                 <div className="w-5/12 flex justify-end">
                     <Link to="/form">
-                        <button className="btn btn-error bg-primary rounded-full font-bold text-white border-none mr-3">
+                        <button className="btn btn-error bg-primary rounded-full font-bold text-white border-none mr-3 px-6">
                             TAMBAH ABSEN
                         </button>
                     </Link>
@@ -48,20 +48,20 @@ const Navbar = () => {
                             <div className="justify-center align-middle content-center flex transition ease-in-out delay-150">
                                 <img src={warning} alt="" className="w-3/12" />
                             </div>
-                            <h3 className="font-bold text-[34px] text-black align-middle text-center mt-3">
+                            <h3 className="font-bold text-[28px] text-black align-middle text-center mt-3">
                                 Mau keluar?
                             </h3>
-                            <p className="py-4 text-center">
+                            <p className="pt-2 pb-4 text-center">
                                 Apakah kamu yakin buat ninggalin aku?
                                 :&#40;&#40;&#40;
                             </p>
-                            <div className="modal-action w-full justify-center mt-3">
+                            <div className="modal-action w-full justify-center mt-3 mb-3">
                                 <form method="dialog">
-                                    <button className="btn border-1 border-slate-500 bg-transparent px-10 py-2 rounded-full font-bold text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
+                                    <button className="btn border-1 border-slate-500 bg-transparent px-12 py-2 rounded-full text-[16px] text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                         Batal
                                     </button>
                                     <button
-                                        className="bg-primary py-3 px-8 rounded-full font-bold text-white hover:bg-red-400 btn border-none"
+                                        className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
                                         onClick={() =>
                                             (window.location.href =
                                                 "http://localhost:5173/")
