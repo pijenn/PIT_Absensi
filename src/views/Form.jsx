@@ -1,5 +1,5 @@
 import backgroundStyle from "../assets/bgLanding.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ceklist from "../assets/ceklis.png";
 import warning from "../assets/warning!!.png";
 import React, { useEffect, useState } from "react";
@@ -7,6 +7,7 @@ import axios from "axios";
 
 const Form = () => {
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const getUsers = async () => {
         try {
@@ -16,12 +17,48 @@ const Form = () => {
             setUsers(response.data.data);
         } catch (e) {
             console.log(e);
+        } finally {
+            setLoading(false);
         }
     };
 
     useEffect(() => {
         getUsers();
     }, []);
+
+    const [rapatKe, setKe] = useState("");
+    const [tanggal, setTanggal] = useState("");
+    const [tempat, setTempat] = useState("");
+    const [link, setLink] = useState("");
+    const [status, setStatus] = useState("")
+    const navigation = useNavigate();
+    const postData = async () => {
+        try{
+    console.log("Sending data:", { tanggal, rapatKe, tempat, link, status, user_id });
+    const response = await fetch("https://api-website-presensi-pit.vercel.app/absensi", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        tanggal,
+        rapatKe,
+        tempat,
+        link,
+        status,
+        user_id
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+  }catch (error) {
+    console.error("Error:", error.message);
+  }
+};
+
     return (
         <>
             <div
@@ -37,19 +74,34 @@ const Form = () => {
                             <div className="text-white text-[20px] font-semibold basis-1/2 mr-3">
                                 <div>Rapat ke</div>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full  bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
-                                    ></input>
+                                    <form>
+                                        <input
+                                            name="rapatKe"
+                                            required
+                                            value={rapatKe}
+                                            onChange={(e) => setKe(e.target.value)}
+                                            type="number"
+                                            className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full  bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
+                                        ></input>
+                                    </form>
                                 </div>
                             </div>
                             <div className="text-left text-white text-[20px] font-semibold basis-1/2 ml-3">
                                 <div> Tanggal</div>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full   bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
-                                    ></input>
+                                    <form>
+                                        <input
+                                            name="tanggal"
+                                            required
+                                            value={tanggal}
+                                            onChange={(e) =>
+                                                setTanggal(e.target.value)
+                                            }
+                                            placeholder="date"
+                                            type="date"
+                                            className="rounded-full py-2 px-4 mx-auto mt-2 mb-4 font-bold w-full   bg-white text-black focus:border-primary focus:outline-none focus:border-[2px]"
+                                        ></input>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -58,26 +110,47 @@ const Form = () => {
                             Tempat
                         </div>
                         <div className="mt-2">
-                            <input
-                                type="text"
-                                className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 bg-white text-black font-bold text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
-                            ></input>
+                            <form>
+                                <input
+                                    name="tempat"
+                                    required
+                                    value={tempat}
+                                    onChange={(e) => setTempat(e.target.value)}
+                                    type="text"
+                                    className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 bg-white text-black font-bold text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
+                                ></input>
+                            </form>
                         </div>
                         <div className="text-white text-[20px] font-semibold mt-3">
                             Link Notulensi
                             <div />
                             <div className="mt-2">
-                                <input
-                                    type="text"
-                                    className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 font-bold bg-white text-black text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
-                                ></input>
+                                <form>
+                                    <input
+                                    name="link"
+                                    required
+                                    value={link}
+                                    onChange={(e) => setLink(e.target.value)}
+                                        type="text"
+                                        className="rounded-full w-full py-2 px-4 mx-auto mt-2 mb-4 font-bold bg-white text-black text-[20px] focus:border-primary focus:outline-none focus:border-[2px]"
+                                    ></input>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div className="flex justify-between h-[500px] bg-white backdrop-blur-lg bg-opacity-30 px-10 py-5 border-[2px] border-white rounded-xl mt-10 animate-fade animate-once animate-duration-500 animate-ease-in-out  overflow-auto">
                         <div className="w-full">
+                            {loading ? (
+                                <p className="text-white text-center text-xl font-bold">
+                                    <div className="mt-10 justify-center items-center">
+                                        Sabar dikit napa kan dah gede
+                                    </div>
+                                    <span className="loading loading-dots loading-lg mt-10"></span>
+                                </p>
+                            ) : (
+                                <p>
                             <div className=" flex flex-col justify-between mt-3 ">
-                                <div className="flex-row justify-between ">
+                                <div className="flex-row justify-between ">                                  
                                     <div className="flex flex-row w-full justify-between">
                                         <h1 className="font-bold text-white text-[20px] basis-1/6 flex justify-center">
                                             NO.
@@ -100,7 +173,7 @@ const Form = () => {
                                                 key={index}
                                             >
                                                 <h1 className=" text-white text-[20px] basis-1/6 flex justify-center">
-                                                    {index+1}
+                                                    {index + 1}
                                                 </h1>
                                                 <h1 className=" text-white text-[20px] basis-1/4  flex justify-start">
                                                     {user.nama}
@@ -109,45 +182,39 @@ const Form = () => {
                                                     {user.role}
                                                 </h1>
                                                 <h1 className="text-white text-[20px] basis-1/4 flex justify-center ">
-                                                    <div className="dropdown">
-                                                        <label
-                                                            tabIndex={0}
-                                                            className="btn m-1 bg-primary border-0 text-[18px] font-bold duration-300 text-white rounded-full hover:bg-red-700 active:bg-red-400 px-4"
+                                                    <div className="flex flex-col gap-2">
+                                                        <select
+                                                            id="status"
+                                                            name="status"
+                                                            value={user.user_id}
+                                                            required
+                                                            onChange={(e) =>
+                                                                setStatus(
+                                                                    e.target
+                                                                        .value
+                                                                )
+                                                            }
+                                                            className="py-2 px-6 rounded-full bg-primary text-white border-1 border-black active:bg-red-700 text-center"
                                                         >
-                                                            STATUS
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                fill="none"
-                                                                viewBox="0 0 24 24"
-                                                                stroke-width="1.5"
-                                                                stroke="currentColor"
-                                                                class="w-6 h-6"
+                                                            <option
+                                                                value="Hadir"
+                                                                className="text-center border-none rounded-full"
                                                             >
-                                                                <path
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                                                />
-                                                            </svg>
-                                                        </label>
-                                                        <ul
-                                                            tabIndex={0}
-                                                            className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit bg-white backdrop-blur-lg bg-opacity-30 content-start"
-                                                        >
-                                                            <li className="bg-primary rounded-full text-white font-bold px-4 py-1 text-[18px]">
-                                                                <a>ALPHA</a>
-                                                            </li>
-                                                            <li className="bg-green-600 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px]">
-                                                                <a className="ml-1">
-                                                                    HADIR
-                                                                </a>
-                                                            </li>
-                                                            <li className="bg-slate-400 rounded-full text-white font-bold mt-2 px-4 py-1 text-[18px] ">
-                                                                <a className="text-center align-middle content-center ml-3">
-                                                                    IZIN
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                                Hadir
+                                                            </option>
+                                                            <option
+                                                                value="Alpha"
+                                                                className="text-center border-none rounded-full"
+                                                            >
+                                                                Alpha
+                                                            </option>
+                                                            <option
+                                                                value="Izin"
+                                                                className="text-center border-none rounded-full"
+                                                            >
+                                                                Izin
+                                                            </option>
+                                                        </select>
                                                     </div>
                                                 </h1>
                                             </div>
@@ -190,7 +257,7 @@ const Form = () => {
                                                 </button>
                                                 <button
                                                     className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
-                                                    onClick={() =>
+                                                    onClick={() => {;
                                                         document
                                                             .getElementById(
                                                                 "my_modal_2"
@@ -199,6 +266,8 @@ const Form = () => {
                                                             (window.location.href =
                                                                 "http://localhost:5173/Beranda")
                                                         )
+
+                                                            }
                                                     }
                                                 >
                                                     Submit
@@ -235,6 +304,7 @@ const Form = () => {
                                     </div>
                                 </dialog>
                             </div>
+                        </p> )}
                         </div>
                     </div>
                 </div>

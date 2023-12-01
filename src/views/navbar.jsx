@@ -9,7 +9,14 @@ const Navbar = () => {
     return (
         <>
             <div className="flex fixed w-full top-0 px-24 py-8 font-poppins flex-row justify-between z-[1] bg-transparent">
-                <img src={logoBem} alt="" className="w-[60px] ml-5" />
+                <img
+                    src={logoBem}
+                    alt=""
+                    className="w-[60px] ml-5 hover:cursor-pointer"
+                    onClick={() =>
+                        (window.location.href = "http://localhost:5173/Beranda")
+                    }
+                />
                 <div className="font-bold text-[18px] text-white mt-3 ml-3 basis-3/4">
                     BEM FILKOM 2023
                 </div>

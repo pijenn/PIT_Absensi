@@ -6,6 +6,12 @@ import redBall from "../assets/redBall.png";
 const Home = () => {
     return (
         <>
+            <div className="flex fixed w-full top-0 px-24 py-8 font-poppins flex-row z-[1] bg-transparent">
+                <img src={logoBem} alt="" className="w-[60px] ml-5" />
+                <div className="font-bold text-[18px] text-white mt-3 ml-4">
+                    BEM FILKOM 2023
+                </div>
+            </div>
             <div
                 className="h-screen bg-cover flex items-center font-poppins"
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
