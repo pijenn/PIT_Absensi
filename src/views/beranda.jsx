@@ -27,18 +27,20 @@ const Beranda = () => {
     return (
         <>
             <div
-                className="h-screen bg-cover font-poppins"
+                className="bg-cover flex items-center font-poppins bg-fixed"
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
                 <div className="w-9/12 mx-auto py-10">
                     <h1 className="text-center text-[32px] font-bold text-primary mt-12 animate-fade animate-once animate-duration-500 animate-ease-in-out">
                         REKAP ABSENSI PIT
                     </h1>
-                    <div className=" bg-gray-400 blur(4px)  bg-opacity-30 px-10 py-6 border-[2px] border-white rounded-xl mt-10 animate-fade animate-once animate-duration-500 animate-ease-in-out">
+                    <div className=" bg-gray-400 blur(4px)  bg-opacity-30 px-10 py-6 border-[2px] border-white rounded-xl mt-10 animate-fade animate-once animate-duration-500 animate-ease-in-out h-[750px]  overflow-auto">
                         <div className="w-full">
                             {loading ? (
                                 <p className="text-white text-center text-xl font-bold">
-                                    <div className="mt-10">Udah gede harus saaaabarrrr</div>
+                                    <div className="mt-10">
+                                        Udah gede harus saaaabarrrr
+                                    </div>
                                     <span className="loading loading-dots loading-lg mt-10"></span>
                                 </p>
                             ) : (

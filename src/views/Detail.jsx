@@ -31,7 +31,7 @@ const Detail = () => {
     return (
         <>
             <div
-                className="h-screen bg-cover font-poppins bg-fixed overflow-y-auto"
+                className="bg-cover flex items-center font-poppins bg-fixed"
                 style={{ backgroundImage: `url(${backgroundStyle})` }}
             >
                 <div className="w-9/12 mx-auto py-10 my-5">
