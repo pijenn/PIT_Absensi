@@ -36,7 +36,7 @@ const Detail = () => {
             >
                 <div className="w-9/12 mx-auto py-10 my-5">
                     <h1 className="text-[32px] text-center font-bold text-[#EE333D] mt-9 animate-fade animate-once animate-duration-500 animate-ease-in-out">
-                        ABSENSI RAPAT KE-1
+                        DETAIL ABSENSI RAPAT
                     </h1>
                     <div className="bg-white backdrop-blur-lg bg-opacity-30 px-10 py-2  border-[1px] border-white rounded-xl mt-10 animate-fade animate-once animate-duration-500 animate-ease-in-out">
                         <div className="w-full">
