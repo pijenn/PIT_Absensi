@@ -318,22 +318,21 @@ const Form = () => {
                                                             <button className="btn border-1 border-slate-500 bg-transparent px-12 py-2 rounded-full text-[16px] text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                                                 Batal
                                                             </button>
-                                                            <button
-                                                                type="submit"
-                                                                className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
-                                                                onClick={() => {
-                                                                    document
-                                                                        .getElementById(
-                                                                            "my_modal_2"
-                                                                        )
-                                                                        .showModal()(
-                                                                        (window.location.href =
-                                                                            "/Beranda")
-                                                                    );
-                                                                }}
-                                                            >
-                                                                Submit
-                                                            </button>
+                                                            <link to="/Beranda">
+                                                                <button
+                                                                    type="submit"
+                                                                    className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
+                                                                    onClick={() => {
+                                                                        document
+                                                                            .getElementById(
+                                                                                "my_modal_2"
+                                                                            )
+                                                                            .showModal()();
+                                                                    }}
+                                                                >
+                                                                    Submit
+                                                                </button>
+                                                            </link>
                                                             <dialog
                                                                 id="my_modal_2"
                                                                 className="modal"
