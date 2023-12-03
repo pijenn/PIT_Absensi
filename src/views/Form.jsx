@@ -328,7 +328,7 @@ const Form = () => {
                                                                         )
                                                                         .showModal()(
                                                                         (window.location.href =
-                                                                            "http://localhost:5173/Beranda")
+                                                                            "/Beranda")
                                                                     );
                                                                 }}
                                                             >

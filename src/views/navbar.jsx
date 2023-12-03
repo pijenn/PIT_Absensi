@@ -14,7 +14,7 @@ const Navbar = () => {
                     alt=""
                     className="w-[60px] ml-5 hover:cursor-pointer"
                     onClick={() =>
-                        (window.location.href = "http://localhost:5173/Beranda")
+                        (window.location.href = "/Beranda")
                     }
                 />
                 <div className="font-bold text-[18px] text-white mt-3 ml-3 basis-3/4">
@@ -71,7 +71,7 @@ const Navbar = () => {
                                         className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
                                         onClick={() =>
                                             (window.location.href =
-                                                "http://localhost:5173/")
+                                                "/")
                                         }
                                     >
                                         Keluar
