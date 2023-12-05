@@ -156,7 +156,6 @@ const Form = () => {
                             </div>
                             <div className="text-white text-[20px] font-semibold mt-3">
                                 Link Notulensi
-                                <div />
                                 <div className="mt-2">
                                     <form>
                                         <input
