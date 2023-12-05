@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <>
             <div className="flex fixed w-full top-0 px-24 py-8 font-poppins flex-row justify-between z-[1] bg-transparent">
-                <Link to="/">
+                <Link to="/detail">
                     <img
                         src={logoBem}
                         alt=""
