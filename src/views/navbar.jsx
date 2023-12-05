@@ -9,16 +9,17 @@ const Navbar = () => {
     return (
         <>
             <div className="flex fixed w-full top-0 px-24 py-8 font-poppins flex-row justify-between z-[1] bg-transparent">
-                <Link to="/detail">
+                <Link to="/beranda" className="flex">
                     <img
                         src={logoBem}
                         alt=""
                         className="w-[60px] ml-5 hover:cursor-pointer"
                     />
+
+                    <div className="font-bold text-[18px] text-white mt-3 ml-3 basis-3/4">
+                        BEM FILKOM 2023
+                    </div>
                 </Link>
-                <div className="font-bold text-[18px] text-white mt-3 ml-3 basis-3/4">
-                    BEM FILKOM 2023
-                </div>
                 <div className="w-5/12 flex justify-end">
                     <Link to="/form">
                         <button className="btn btn-error bg-primary rounded-full font-bold text-white border-none mr-3 px-6">
