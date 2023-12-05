@@ -8,7 +8,6 @@ import axios from "axios";
 const Form = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const [ke, setKe] = useState("");
     const [tanggal, setTanggal] = useState("");
     const [tempat, setTempat] = useState("");
@@ -318,7 +317,7 @@ const Form = () => {
                                                             <button className="btn border-1 border-slate-500 bg-transparent px-12 py-2 rounded-full text-[16px] text-slate-500 basis-1/2 mr-4 hover:bg-transparent">
                                                                 Batal
                                                             </button>
-                                                            <link to="/Beranda">
+                                                            <Link to="/Beranda">
                                                                 <button
                                                                     type="submit"
                                                                     className="bg-primary py-3 px-12 rounded-full font-bold text-white hover:bg-red-400 btn border-none text-[16px]"
@@ -332,7 +331,7 @@ const Form = () => {
                                                                 >
                                                                     Submit
                                                                 </button>
-                                                            </link>
+                                                            </Link>
                                                             <dialog
                                                                 id="my_modal_2"
                                                                 className="modal"
